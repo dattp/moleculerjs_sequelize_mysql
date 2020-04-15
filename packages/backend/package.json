@@ -1,0 +1,27 @@
+{
+  "name": "@app/backend",
+  "version": "1.0.0",
+  "description": "Real World backend",
+  "main": "index.js",
+  "scripts": {
+    "start": "moleculer-runner --env --repl --hot services --mask **/*.service.js",
+    "test:unit": "jest --coverage --env"
+  },
+  "author": "DatPT",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "ioredis": "^4.16.2",
+    "moleculer": "^0.14.5",
+    "moleculer-db": "^0.8.7",
+    "moleculer-db-adapter-sequelize": "^0.2.6",
+    "moleculer-web": "^0.9.1",
+    "mysql2": "^2.1.0",
+    "sequelize": "^5.21.6"
+  },
+  "devDependencies": {
+    "jest": "^25.3.0",
+    "moleculer-repl": "^0.6.3"
+  }
+}

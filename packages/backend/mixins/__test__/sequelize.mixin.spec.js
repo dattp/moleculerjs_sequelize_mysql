@@ -1,0 +1,26 @@
+/* eslint-disable no-undef */
+const SequelizeAdapter = require('../sequelize.mixin')
+
+describe('DbMixin', () => {
+  it('Should create mixin correct', () => {
+    const dbMixin = SequelizeAdapter.DbMixin()
+    expect(dbMixin).toBeDefined()
+    expect(dbMixin.init).toBeDefined()
+    expect(dbMixin.connect).toBeDefined()
+    expect(dbMixin.disconnect).toBeDefined()
+    expect(dbMixin.find).toBeDefined()
+    expect(dbMixin.findOne).toBeDefined()
+    expect(dbMixin.findById).toBeDefined()
+    expect(dbMixin.findByIds).toBeDefined()
+    expect(dbMixin.count).toBeDefined()
+    expect(dbMixin.insert).toBeDefined()
+    expect(dbMixin.insertMany).toBeDefined()
+    expect(dbMixin.updateMany).toBeDefined()
+    expect(dbMixin.updateById).toBeDefined()
+    expect(dbMixin.removeMany).toBeDefined()
+    expect(dbMixin.removeById).toBeDefined()
+    expect(dbMixin.opts[3].dialect).toEqual('mysql')
+    // expect(dbMixin.opts[3].dialect).toEqual('mysql')
+    // expect(dbMixin.opts[3].dialect).toEqual('mysql')
+  })
+})
